@@ -1,4 +1,4 @@
-name: 'Build DNAnexus applet'
+name: 'Build and publish a DNAnexus applet'
 description: 'Build & publish a DNAnexus applet to a specified project'
 author: 'kurt.mueller@osumc.edu'
 branding:
