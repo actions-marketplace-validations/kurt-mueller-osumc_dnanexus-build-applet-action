@@ -29,7 +29,7 @@ You'll need to set an environment variable, `DX_TOKEN`, in project settings that
 ## Example usage in a github workflow
 
 ```yaml
-uses: actions/dx-build-github-action@main
+uses: kurt-mueller-osumc/dnanexus-build-applet-action@1
 with:
   project-id: project-1234
   overwrite: true
