@@ -1,12 +1,22 @@
-name: 'Container Action Template'
-description: 'Get started with Container actions'
+name: 'Build DNAnexus applet'
+description: 'Build & publish a DNAnexus applet to a specified project'
 author: 'GitHub'
-inputs: 
-  myInput:
-    description: 'Input to use'
-    default: 'world'
+inputs:
+  project-id:
+    description: 'The dnanexus project id in which to build/publish the app'
+    required: true
+  overwrite:
+    description: 'Specify if the existing applet(s) of hte same name in the destination folder will be overwritten'
+    required: true
+    default: 'false'
+  applet-directory:
+    description: 'The directory in the repo that contains the dnanexus applet'
+    required: true
+    default: '.'
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.myInput }}
+    - ${{ inputs.project-id }}
+    - ${{ inputs.overwrite }}
+    - ${{ inputs.applet-directory }}
