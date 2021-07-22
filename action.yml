@@ -1,6 +1,9 @@
 name: 'Build DNAnexus applet'
 description: 'Build & publish a DNAnexus applet to a specified project'
-author: 'GitHub'
+author: 'kurt.mueller@osumc.edu'
+branding:
+  icon: 'book'
+  color: 'blue'
 inputs:
   project-id:
     description: 'The dnanexus project id in which to build/publish the app'
@@ -13,6 +16,9 @@ inputs:
     description: 'The directory in the repo that contains the dnanexus applet'
     required: true
     default: '.'
+outputs:
+  applet-id:
+    description: "The id of the published DNAnexus applet"
 runs:
   using: 'docker'
   image: 'Dockerfile'
